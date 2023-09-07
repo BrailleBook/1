@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block mycontent %}
+		<div id="page-wrapper">
+
+				<div id="search"  align="center" >
+					<form  enctype="multipart/form-data" action="{% url 'myapp:answer' %}" method="post">
+							<div class="form-group ">
+								<input type="file" name="image">
+							</div>
+							<br>
+							<button class="btn btn-default btn-S" >Translate Braille</button>
+						</form>
+				</div>
+									<br>
+										{% if flag %}
+				<img src="/media/{{pic}}"  width="800">
+
+       			 {% endif %}
+		</div>
+
+
+{% endblock mycontent %}
